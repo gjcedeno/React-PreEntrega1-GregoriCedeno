@@ -11,30 +11,39 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import logo from "/src/assets/img/Logo.png"
 import IconButton from "@mui/material/IconButton";
+import { Link } from "react-router-dom";
 
 
-export default function Navbar() {
+export function Navbar() {
   return (
     <Box>
-      <AppBar position="static" sx={{ backgroundColor: "#650606" }}>
+      <AppBar position="static" sx={{ backgroundColor: "black" }}>
         <Toolbar sx={{ justifyContent: "space-around" }}>
+          <Link to="/">
           <img src={logo} alt="Logo" style={{ width: '50px' }} />
+          </Link>
 
           <Box sx={{ display: { xs: "none", sm: "flex" }, gap: "10px" }}>
             <List component="nav" sx={{ display: "flex", gap: "10px" }}>
               <ListItem disablePadding sx={{ display: "inline-block" }}>
                 <ListItemButton>
+                <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}>
+                  <Typography variant="button">Ver todo</Typography>
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding sx={{ display: "inline-block" }}>
+                <ListItemButton>
+                <Link to="category/sudaderas" style={{ textDecoration: 'none', color: '#fff' }}>
+                  <Typography variant="button">Sudaderas</Typography>
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding sx={{ display: "inline-block" }}>
+                <ListItemButton>
+                <Link to="category/camisetas" style={{ textDecoration: 'none', color: '#fff' }}>
                   <Typography variant="button">Camisetas</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding sx={{ display: "inline-block" }}>
-                <ListItemButton>
-                  <Typography variant="button">Pantalones</Typography>
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding sx={{ display: "inline-block" }}>
-                <ListItemButton>
-                  <Typography variant="button">Accesorios</Typography>
+                  </Link>
                 </ListItemButton>
               </ListItem>
             </List>
