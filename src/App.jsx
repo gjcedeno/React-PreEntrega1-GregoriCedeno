@@ -3,6 +3,8 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
 import CartContainer from "./components/pages/cart/CartContainer";
 import { Layout } from "./components/layout/Layout";
+import CartContextProvider from "./context/CartContext";
+import { CheckoutFormik } from "./components/pages/checkoutFormik/CheckoutFormik";
 
 
 const App = () => {
@@ -10,6 +12,7 @@ const App = () => {
 
     
     <BrowserRouter>
+    <CartContextProvider>
       <Routes>
 
       <Route element={<Layout />}>
@@ -18,10 +21,12 @@ const App = () => {
 
         <Route path="/ItemDetail/:id" element={<ItemDetailContainer/>} />
         <Route path="/cart" element={<CartContainer/>} />
+        <Route path="/checkout" element={<CheckoutFormik/>} />
         <Route path="*" element={<h1>Error, page not found</h1>} />
       </Route>
 
       </Routes>
+    </CartContextProvider>
     </BrowserRouter>
   );
 };

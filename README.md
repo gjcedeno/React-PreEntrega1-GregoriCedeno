@@ -1,8 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- h1 -->
+# Mi Ecommerce
+<!-- h3 -->
+### Esta es una app de tal cosa
+<!-- h4 -->
+#### Las herramientas utilizadas son:
 
-Currently, two official plugins are available:
+<!-- lista -->
+- una
+- dos
+- mui
+- formik
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- agregar imagenes -->
+![](ruta de la imagen sin comillas)
+
+
+<!-- añadir una cajita de texto para copiar y pegar-->
+```
+git clone http/blabla
+```
+
+<!-- añadir una cajita de codigo javascript para copiar y pegar-->
+
+```javascript
+const x = "pepe"
+
+const sumar = ()=> {
+    return 1 + 2
+}
+```
+<!-- agregar enlaces -->
+[Texto del enlace](ruta del enlace)
+

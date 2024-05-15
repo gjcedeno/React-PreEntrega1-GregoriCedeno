@@ -23,14 +23,17 @@ const ProductCard = ({ title, description, price, img, id }) => {
         <Typography variant="body2" color="text.secondary">
           {description}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" className="price-text">
          $ {price}
         </Typography>
       </CardContent>
-      <CardActions>
-      <Link to={`/ItemDetail/${id}`}>
-          <Button size="small">Ver detalle</Button>
-        </Link>
+      <CardActions className="card-actions">
+      <div className="button-container"> {/* Contenedor del botón con estilo aplicado */}
+          <Link to={`/ItemDetail/${id}`} style={{ textDecoration: 'none', color: 'white' }}>
+            <Button size="small" style={{ color: 'white' }}>Comprar</Button>
+          </Link>
+        </div>
+
       </CardActions>
     </Card>
   );
